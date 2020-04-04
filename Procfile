@@ -1,1 +1,1 @@
-web:python __init__.py
+web: gunicorn gettingstarted.wsgi
