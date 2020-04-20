@@ -44,12 +44,16 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     num = random.randint(1,10)
+    sticker_message = StickerSendMessage(
+    package_id='1',
+    sticker_id='1'
+)
     if "抽籤" in msg:
       line_bot_api.reply_message(event.reply_token,TextSendMessage(text="第%d項優惠"%num))
     elif msg =="誰是正妹?":
       line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你就是正妹"))
     else:
-        line_bot_api.push_message(userID,1,2)
+        line_bot_api.push_message(userID, sticker_message)
                 
         
 if __name__ == "__main__":
