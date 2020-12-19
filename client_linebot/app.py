@@ -15,19 +15,19 @@ import random
 
 
 app = Flask(__name__)
-accessToken = 'S7X9UWoHaIh4oXILrCZTSjUj4ngwiZSDt+WMLA/VmA6UG5dxOxRGF8ODOq4H9ZuOYgrTTaDQYN2B6iBIaXEQPwKoJt3uit3anqklTWw1N7MyL4XKOTEsqFn+SvuPv58i31npmgTv5ykduY/T2AaMUAdB04t89/1O/w1cDnyilFU='
+accessToken = ''
 line_bot_api = LineBotApi(accessToken)
-handler = WebhookHandler('7b71a98cfbf44c0ea7f3eb1429148802')
+handler = WebhookHandler('')
 
-accessToken1 = 'fEyf2GhueRTjeBlIHy1LMdoKc89htXj6WWm3f8rV6c+bsDpaaaXBTFw9O7WenDsBYo8xaQeWRoRth+/jTsI/F7bGYipezEsJ5IPh6ptsD2TyYmovaQiobQ9gm+J0O+hdiu9iM5F9DpcGGLeupCgBtgdB04t89/1O/w1cDnyilFU='
+accessToken1 = ''
 line_bot_api1 = LineBotApi(accessToken1)
-handler1 = WebhookHandler('4ab6c0ad1333c9b94c3d89718e47870c')
+handler1 = WebhookHandler('')
 
 @app.route("/point", methods=['POST'])
 def point():
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("pet")
     num = (wks1.rows)+1
@@ -65,7 +65,7 @@ def gameStart(event,userId):
         data.append(temp)
         import pygsheets
         gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-        survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+        survey_url = 'https://docs.google.com/spreadsheets/d/'
         sh = gc.open_by_url(survey_url)
         wks1 = sh.worksheet_by_title("push")
         num = (wks1.rows)+1
@@ -107,7 +107,7 @@ def game(index, event,userId):
             data[index][1] =''
             import pygsheets
             gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-            survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+            survey_url = 'https://docs.google.com/spreadsheets/d'
             sh = gc.open_by_url(survey_url)
             wks1 = sh.worksheet_by_title("push")
             num = (wks1.rows)+1
@@ -173,7 +173,7 @@ def gameTime(event):
 def useFive(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -239,7 +239,7 @@ def useFive(event,userId):
 def confirmFive(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -257,7 +257,7 @@ def confirmFive(event,userId):
 def useTen(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -323,7 +323,7 @@ def useTen(event,userId):
 def confirmTen(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -342,7 +342,7 @@ def confirmTen(event,userId):
 def useTwen(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -408,7 +408,7 @@ def useTwen(event,userId):
 def confirmTwen(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -438,7 +438,7 @@ def checkUserId(msg,data, userId):
 def isFirst(userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -454,7 +454,7 @@ def isFirst(userId):
 def buyPet(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -534,7 +534,7 @@ def myPet(event):
 def petSituation(event,userId):
         import pygsheets
         gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-        survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+        survey_url = 'https://docs.google.com/spreadsheets/d/'
         sh = gc.open_by_url(survey_url)
         wks1 = sh.worksheet_by_title("push")
         num = (wks1.rows)+1
@@ -871,7 +871,7 @@ def petSituation(event,userId):
 def useHundred(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -936,7 +936,7 @@ def useHundred(event,userId):
 def confirmHundred(event,userId):
     import pygsheets
     gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-    survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+    survey_url = 'https://docs.google.com/spreadsheets/d/'
     sh = gc.open_by_url(survey_url)
     wks1 = sh.worksheet_by_title("push")
     num = (wks1.rows)+1
@@ -1012,7 +1012,7 @@ data = []  # [[userID, answer, guessTime],[userID, answer, guessTime]]
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.source.user_id !="Udeadbeefdeadbeefdeadbeefdeadbeef":        
+    if event.source.user_id !="":        
         global data
         userId = event.source.user_id #getUserId
         index = -2
@@ -1065,7 +1065,7 @@ def handle_message(event):
             elif msg == '就決定是你了，獨角獸':
                 import pygsheets
                 gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-                survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+                survey_url = 'https://docs.google.com/spreadsheets/d/'
                 sh = gc.open_by_url(survey_url)
                 wks1 = sh.worksheet_by_title("push")
                 num = (wks1.rows)+1
@@ -1079,7 +1079,7 @@ def handle_message(event):
             elif msg == '就決定是你了，鵝':
                 import pygsheets
                 gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-                survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+                survey_url = 'https://docs.google.com/spreadsheets/d//'
                 sh = gc.open_by_url(survey_url)
                 wks1 = sh.worksheet_by_title("push")
                 num = (wks1.rows)+1
@@ -1093,7 +1093,7 @@ def handle_message(event):
             elif msg == '就決定是你了，長頸鹿':
                 import pygsheets
                 gc = pygsheets.authorize(service_account_file='testing-dc6ff47816c7.json')
-                survey_url = 'https://docs.google.com/spreadsheets/d/1jW6jvUXP8aSYcSMh7RDLp1_OXo0Rg4g9fMkFmS90hkM/'
+                survey_url = 'https://docs.google.com/spreadsheets/d/'
                 sh = gc.open_by_url(survey_url)
                 wks1 = sh.worksheet_by_title("push")
                 num = (wks1.rows)+1
