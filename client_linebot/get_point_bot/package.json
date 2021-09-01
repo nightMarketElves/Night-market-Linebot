@@ -1,0 +1,35 @@
+{
+  "name": "line-liff-v2-starter",
+  "version": "1.0.0",
+  "description": "This is a small web application that demonstrates the basic functionality of the [LINE Front-end Framework (LIFF)](https://developers.line.biz/en/docs/liff/overview/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/line/line-liff-v2-starter.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "asyncawait": "^3.0.0",
+    "express": "^4.17.1",
+    "google-auth-library": "^6.0.0",
+    "google-spreadsheet": "^2.0.9",
+    "googleapis": "^39.2.0",
+    "require": "^2.4.20"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "bugs": {
+    "url": "https://github.com/line/line-liff-v2-starter/issues"
+  },
+  "homepage": "https://github.com/line/line-liff-v2-starter#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "author": ""
+}
