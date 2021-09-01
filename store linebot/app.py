@@ -14,13 +14,13 @@ import json
 import random
 
 app = Flask(__name__)
-accessToken = 'S7X9UWoHaIh4oXILrCZTSjUj4ngwiZSDt+WMLA/VmA6UG5dxOxRGF8ODOq4H9ZuOYgrTTaDQYN2B6iBIaXEQPwKoJt3uit3anqklTWw1N7MyL4XKOTEsqFn+SvuPv58i31npmgTv5ykduY/T2AaMUAdB04t89/1O/w1cDnyilFU='
+accessToken = 'client_linebot_accessToken' #客戶端token
 line_bot_api = LineBotApi(accessToken)
-handler = WebhookHandler('7b71a98cfbf44c0ea7f3eb1429148802')
+handler = WebhookHandler('client_linebot_channelSecret')  #客戶端channel secret
 
-accessToken1 = 'fEyf2GhueRTjeBlIHy1LMdoKc89htXj6WWm3f8rV6c+bsDpaaaXBTFw9O7WenDsBYo8xaQeWRoRth+/jTsI/F7bGYipezEsJ5IPh6ptsD2TyYmovaQiobQ9gm+J0O+hdiu9iM5F9DpcGGLeupCgBtgdB04t89/1O/w1cDnyilFU='
+accessToken1 = 'store_linebot_accessToken' #店家端token
 line_bot_api1 = LineBotApi(accessToken1)
-handler1 = WebhookHandler('4ab6c0ad1333c9b94c3d89718e47870c')
+handler1 = WebhookHandler('store_linebot_channelSecret')  #店家端channel secret
 
 
 @app.route("/store", methods=['POST'])
